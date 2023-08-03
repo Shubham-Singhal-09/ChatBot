@@ -4,7 +4,7 @@ import sys
 
 # Setup OPENAI_API_KEY
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 # Setup logging
 
