@@ -4,7 +4,7 @@ import openai
 app = Flask(__name__)
 
 model_engine = "text-davinci-003"
-openai.api_key = "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"
+openai.api_key = "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"
 
 @app.route("/")
 def home():
