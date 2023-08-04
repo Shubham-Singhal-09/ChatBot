@@ -4,7 +4,7 @@ import sys
 
 # Setup OPENAI_API_KEY
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 # Setup logging
 
@@ -66,6 +66,8 @@ def analysis(text):
 
     raw_json = res["choices"][0]["text"].strip()
 
+    return raw_json
+
     try:
         json_data = loads(raw_json)
         analysis_results.append(json_data)
@@ -73,8 +75,6 @@ def analysis(text):
         log.debug(f"JSON response: {pprint(json_data)}")
 
         extra_prompts.append(f"\n{text}\n{raw_json}")
-        return raw_json
-       
     except Exception as e:
         log.error(f"Failed to parse '{raw_json}' -> {e}")
         analysis_results.append([])
